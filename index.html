@@ -1,14 +1,104 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hardik Shingadiya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
     <style>
-      body{
-          background:grey;
-      }
-      h2{
-          color:orange;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            overflow: hidden;
+        }
+
+        /* Animated background circles */
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out alternate;
+        }
+
+        body::after {
+            width: 300px;
+            height: 300px;
+            bottom: 10%;
+            right: 15%;
+            animation-duration: 8s;
+        }
+
+        @keyframes float {
+            from { transform: translateY(-30px); }
+            to { transform: translateY(30px); }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #ffffff;
+            text-transform: uppercase;
+            position: relative;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #00c6ff,
+                             0 0 20px #0072ff,
+                             0 0 30px #00c6ff;
+            }
+            to {
+                text-shadow: 0 0 20px #ff00cc,
+                             0 0 30px #3333ff,
+                             0 0 40px #ff00cc;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
     </style>
+<<<<<<< HEAD
     <title>Demo Webpage</title>
       <h2>Hardik Shingadiya</h2>
   </head>
 </html>
+=======
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Hardik Shingadiya</h1>
+    </div>
+
+</body>
+</html>
+>>>>>>> 9f298d7822a8de22edcba5544d93f4e20c65dc00

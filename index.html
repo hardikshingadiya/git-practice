@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Hardik Shingadiya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -20,71 +20,35 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            overflow: hidden;
-        }
-
-        /* Animated background circles */
-        body::before,
-        body::after {
-            content: "";
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.2), transparent);
-            border-radius: 50%;
-            animation: float 6s infinite ease-in-out alternate;
-        }
-
-        body::after {
-            width: 300px;
-            height: 300px;
-            bottom: 10%;
-            right: 15%;
-            animation-duration: 8s;
-        }
-
-        @keyframes float {
-            from { transform: translateY(-30px); }
-            to { transform: translateY(30px); }
-        }
-
-        .container {
-            text-align: center;
-            z-index: 2;
         }
 
         h1 {
-            font-size: 5rem;
-            font-weight: 800;
-            letter-spacing: 4px;
+            font-size: 4rem;
             color: #ffffff;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            position: relative;
-            animation: glow 2s ease-in-out infinite alternate;
+            text-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+            cursor: default;
         }
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #00c6ff,
-                             0 0 20px #0072ff,
-                             0 0 30px #00c6ff;
-            }
-            to {
-                text-shadow: 0 0 20px #ff00cc,
-                             0 0 30px #3333ff,
-                             0 0 40px #ff00cc;
-            }
+        h1:hover {
+            transform: scale(1.08);
+            text-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
         }
     </style>
-    <body>
-        <h1>Hardik Shingadiya</h1>
-    </body>
+</head>
+<body>
+
+    <h1>Hardik Shingadiya</h1>
+
+</body>
+</html>
